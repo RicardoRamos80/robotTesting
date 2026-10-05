@@ -1,0 +1,38 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RobotTesting - Automation Engineering & Quality Solutions">
+<title>Contact | RobotTesting</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="mark">R</span><span>ROBOT<b>TESTING</b></span></a>
+  <button class="menu" aria-label="Menu">☰</button>
+  <nav>
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="services.html" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="academy.html" data-es="Cursos" data-en="Academy">Cursos</a>
+    <a href="about.html" data-es="Nosotros" data-en="About">Nosotros</a>
+    <a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a>
+    <button class="lang" id="langToggle">ES / EN</button>
+    <a class="pill" href="contact.html" data-es="Solicita una PoC" data-en="Request a PoC">Solicita una PoC</a>
+  </nav>
+</header>
+<main>
+<section class="page-hero"><span class="kicker">LET'S TALK</span><h1 data-es="Hablemos de tu proyecto." data-en="Let's talk about your project.">Hablemos de tu proyecto.</h1><p data-es="Cuéntanos qué quieres automatizar. Para una PoC basta con identificar un flujo crítico, ambiente disponible y objetivo." data-en="Tell us what you want to automate. For a PoC, we only need a critical flow, an available environment and an objective.">Cuéntanos qué quieres automatizar.</p></section>
+<section class="section contact-grid">
+ <form onsubmit="event.preventDefault(); alert(document.documentElement.lang==='es'?'PoC: conecta este formulario a tu correo o servicio de formularios antes de publicar.':'PoC: connect this form to your email or form service before publishing.');">
+  <label data-es="Nombre" data-en="Name">Nombre</label><input required placeholder="Nombre / Name">
+  <label data-es="Correo" data-en="Email">Correo</label><input required type="email" placeholder="tu@email.com">
+  <label data-es="Empresa" data-en="Company">Empresa</label><input placeholder="Empresa / Company">
+  <label data-es="¿Qué quieres automatizar?" data-en="What do you want to automate?">¿Qué quieres automatizar?</label><select><option>Web Automation</option><option>Mobile Automation</option><option>API Testing</option><option>Performance Testing</option><option>Automation Assessment / PoC</option><option>Training / Academy</option></select>
+  <label data-es="Mensaje" data-en="Message">Mensaje</label><textarea rows="6" placeholder="Cuéntanos sobre tu proyecto / Tell us about your project"></textarea>
+  <button class="button" data-es="Enviar solicitud →" data-en="Send request →">Enviar solicitud →</button>
+ </form>
+ <aside class="contact-card"><span class="kicker">CONTACT</span><h2 data-es="Información comercial" data-en="Business information">Información comercial</h2><p><b>Email</b><br>contacto@robottesting.example</p><p><b>Location</b><br><span data-es="México · Servicio remoto" data-en="Mexico · Remote service">México · Servicio remoto</span></p><p><b>LinkedIn</b><br><span data-es="Agregar perfil empresarial antes de publicar" data-en="Add business profile before publishing">Agregar perfil empresarial antes de publicar</span></p><hr><p class="note" data-es="Los datos anteriores son placeholders del PoC. Reemplázalos por tus datos comerciales reales antes de publicar." data-en="The details above are PoC placeholders. Replace them with your actual business contact details before publishing.">Los datos anteriores son placeholders del PoC.</p></aside>
+</section>
+</main>
+<footer>
+  <div class="brand"><span class="mark">R</span><span>ROBOT<b>TESTING</b></span></div>
+  <p data-es="Automation Engineering & Quality Solutions · México / Remoto"
+     data-en="Automation Engineering & Quality Solutions · Mexico / Remote">Automation Engineering & Quality Solutions · México / Remoto</p>
+  <p>© 2026 RobotTesting · PoC v0.2</p>
+</footer>
+<script src="script.js"></script>
+</body></html>

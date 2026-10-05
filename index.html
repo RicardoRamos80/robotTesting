@@ -1,17 +1,64 @@
-<!doctype html><html lang='es'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>RobotTesting | Automation Engineering & Quality Solutions</title><link rel='stylesheet' href='styles.css'></head><body><header><b>R&nbsp; ROBOT<span>TESTING</span></b><nav><a href='#servicios'>Servicios</a><a href='#ai'>AI Automation</a><a href='#tech'>Tecnologías</a><a href='#curso'>Capacitación</a><a class='pill' href='#contacto'>Solicita una PoC</a></nav></header><main><section class='hero'><div><small>AUTOMATION ENGINEERING & QUALITY SOLUTIONS</small><h1>Quality Engineering<br><em>que acelera tu software.</em></h1><p>Soluciones de automatización mantenibles para Web, APIs y Mobile, integradas a CI/CD y aceleradas por IA con supervisión de especialistas QA.</p><p><a class='cta' href='#contacto'>Solicitar una PoC →</a> <a class='ghost' href='#servicios'>Conocer servicios</a></p><div class='checks'>✓ Web &nbsp; ✓ Mobile &nbsp; ✓ API &nbsp; ✓ Performance &nbsp; ✓ CI/CD</div></div><div class='terminal'><div class='bar'>● ● ● &nbsp; RobotTesting / regression-suite</div><pre>$ npx playwright test
-
-Running 24 tests using 4 workers
-
-✓ Login & authentication
-✓ Product search
-✓ Checkout flow
-✓ API validation
-✓ Mobile viewport
-
-<span>24 passed | 0 failed</span>
-QUALITY GATE: PASSED ✓</pre></div></section><section id='servicios'><div class='title'><small>SERVICIOS</small><h2>Automatización que crece con tu producto</h2><p>Desde una prueba de concepto hasta una estrategia continua de Quality Engineering.</p></div><div class='grid'><article><i>&lt;/&gt;</i><h3>Web Automation</h3><p>Suites E2E mantenibles con POM, datos y evidencias.</p><b>Playwright · Selenium · TypeScript · Java</b></article><article><i>▣</i><h3>Mobile Automation</h3><p>Automatización de flujos críticos Android/iOS.</p><b>Appium · Android · iOS</b></article><article><i>API</i><h3>API Testing</h3><p>Validación funcional de servicios y escenarios UI + API.</p><b>REST · Postman · Playwright</b></article><article><i>↗</i><h3>Performance</h3><p>Pruebas de carga, estrés y escalabilidad.</p><b>JMeter · LoadRunner</b></article><article><i>∞</i><h3>CI/CD Quality Gates</h3><p>Feedback automático de calidad en cada cambio.</p><b>GitHub Actions · Azure DevOps</b></article><article><i>◎</i><h3>Automation Assessment</h3><p>Roadmap, arquitectura y oportunidades de automatización.</p><b>Strategy · Framework · ROI</b></article></div></section><section id='ai' class='split'><div><small>ROBOTTESTING AI</small><h2>Automation acelerada por IA.<br><em>Supervisada por especialistas QA.</em></h2><p>IA como acelerador para analizar escenarios, proponer pruebas, generar automatización y diagnosticar fallos. Arquitectura y decisiones bajo control humano.</p></div><div class='flow'><b>01<br><small>REQUIREMENT</small></b> → <b>02<br><small>AI + QA</small></b> → <b>03<br><small>AUTOMATE</small></b> → <b>04<br><small>EXECUTE</small></b> → <b>05<br><small>EVIDENCE</small></b></div></section><section id='tech'><div class='title'><small>TECH STACK</small><h2>Tecnología adecuada para cada capa</h2></div><div class='logos'><b>PW<br><small>Playwright</small></b><b>Se<br><small>Selenium</small></b><b>TS<br><small>TypeScript</small></b><b>Java<br><small>Java</small></b><b>Ap<br><small>Appium</small></b><b>API<br><small>Postman</small></b><b>JM<br><small>JMeter</small></b><b>Git<br><small>GitHub</small></b><b>Az<br><small>Azure DevOps</small></b></div></section><section id='curso' class='split course'><div><small>ROBOTTESTING ACADEMY</small><h2>De QA Manual a Automation con <em>Playwright + TypeScript</em></h2><p>Curso en vivo y práctico. Framework real, Web + API, POM, Git, CI/CD y proyecto para portafolio.</p><p><strong>8 sesiones · 100% práctico · Proyecto final</strong></p><a class='cta' href='#contacto'>Quiero información →</a></div><div class='terminal'><pre>test('checkout flow', async ({ page }) => {
-  const shop = new ShopFlow(page);
-  await shop.login();
-  await shop.addProduct();
-  await shop.checkout();
-});</pre></div></section><section id='contacto' class='contact'><small>¿TIENES UN FLUJO QUE QUIERES AUTOMATIZAR?</small><h2>Comencemos con una <em>prueba de concepto.</em></h2><p>Seleccionamos un flujo crítico, evaluamos la aplicación y demostramos cómo podría funcionar una estrategia de automatización para tu producto.</p><a class='cta' href='mailto:contacto@robottesting.example'>Contactar a RobotTesting →</a><p class='note'>PoC: reemplaza este correo por tu correo comercial y agrega WhatsApp/LinkedIn antes de publicar.</p></section></main><footer><b>R ROBOT<span>TESTING</span></b><p>Automation Engineering & Quality Solutions</p><p>© 2026 RobotTesting · PoC v0.1</p></footer></body></html>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RobotTesting - Automation Engineering & Quality Solutions">
+<title>Home | RobotTesting</title><link rel="stylesheet" href="styles.css"></head><body>
+<header class="site-header">
+  <a class="brand" href="index.html"><span class="mark">R</span><span>ROBOT<b>TESTING</b></span></a>
+  <button class="menu" aria-label="Menu">☰</button>
+  <nav>
+    <a href="index.html" data-es="Inicio" data-en="Home">Inicio</a>
+    <a href="services.html" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="academy.html" data-es="Cursos" data-en="Academy">Cursos</a>
+    <a href="about.html" data-es="Nosotros" data-en="About">Nosotros</a>
+    <a href="contact.html" data-es="Contacto" data-en="Contact">Contacto</a>
+    <button class="lang" id="langToggle">ES / EN</button>
+    <a class="pill" href="contact.html" data-es="Solicita una PoC" data-en="Request a PoC">Solicita una PoC</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+ <div class="hero-copy">
+  <span class="kicker">AUTOMATION ENGINEERING & QUALITY SOLUTIONS</span>
+  <h1 data-es="Impulsamos la calidad con automatización e IA."
+      data-en="We drive quality with automation and AI.">Impulsamos la calidad con automatización e IA.</h1>
+  <p data-es="Soluciones de Quality Engineering para Web, Mobile y APIs: frameworks mantenibles, pruebas de performance, CI/CD y automatización acelerada por IA con supervisión humana."
+     data-en="Quality Engineering solutions for Web, Mobile and APIs: maintainable frameworks, performance testing, CI/CD, and AI-accelerated automation with human oversight.">Soluciones de Quality Engineering para Web, Mobile y APIs: frameworks mantenibles, pruebas de performance, CI/CD y automatización acelerada por IA con supervisión humana.</p>
+  <div class="cta"><a class="button" href="contact.html" data-es="Solicita una PoC →" data-en="Request a PoC →">Solicita una PoC →</a><a class="button ghost" href="services.html" data-es="Conoce nuestros servicios" data-en="Explore our services">Conoce nuestros servicios</a></div>
+  <div class="badges"><span>✓ Web</span><span>✓ Mobile</span><span>✓ API</span><span>✓ Performance</span><span>✓ CI/CD</span></div>
+ </div>
+ <div class="hero-art">
+   <img src="assets/robottesting-logo.png" alt="RobotTesting corporate logo">
+ </div>
+</section>
+<section class="trust">
+ <div><b>01</b><span data-es="Arquitectura mantenible" data-en="Maintainable architecture">Arquitectura mantenible</span></div>
+ <div><b>02</b><span data-es="Automatización orientada al riesgo" data-en="Risk-driven automation">Automatización orientada al riesgo</span></div>
+ <div><b>03</b><span data-es="Evidencia y trazabilidad" data-en="Evidence and traceability">Evidencia y trazabilidad</span></div>
+ <div><b>04</b><span data-es="Integración continua" data-en="Continuous integration">Integración continua</span></div>
+</section>
+<section class="section">
+ <div class="heading"><span>SERVICES</span><h2 data-es="Quality Engineering de punta a punta" data-en="End-to-end Quality Engineering">Quality Engineering de punta a punta</h2><p data-es="No vendemos scripts aislados. Diseñamos una estrategia de automatización que pueda mantenerse y crecer con el producto." data-en="We do not sell isolated scripts. We design an automation strategy that can be maintained and grow with the product.">No vendemos scripts aislados. Diseñamos una estrategia de automatización que pueda mantenerse y crecer con el producto.</p></div>
+ <div class="grid cards">
+  <a href="services.html#web"><article><div class="icon">&lt;/&gt;</div><h3>Web Automation</h3><p data-es="Regresión funcional y E2E para aplicaciones web." data-en="Functional regression and E2E automation for web applications.">Regresión funcional y E2E para aplicaciones web.</p><em>Playwright · Selenium</em></article></a>
+  <a href="services.html#mobile"><article><div class="icon">▣</div><h3>Mobile Automation</h3><p data-es="Flujos críticos para apps nativas, híbridas y mobile web." data-en="Critical flows for native, hybrid and mobile web applications.">Flujos críticos para apps nativas, híbridas y mobile web.</p><em>Appium · Android · iOS</em></article></a>
+  <a href="services.html#api"><article><div class="icon">API</div><h3>API Testing</h3><p data-es="Servicios REST, integración y validación UI + API." data-en="REST services, integration, and UI + API validation.">Servicios REST, integración y validación UI + API.</p><em>REST · Postman</em></article></a>
+  <a href="services.html#performance"><article><div class="icon">↗</div><h3>Performance</h3><p data-es="Carga, estrés, escalabilidad y análisis de resultados." data-en="Load, stress, scalability and result analysis.">Carga, estrés, escalabilidad y análisis de resultados.</p><em>JMeter · LoadRunner</em></article></a>
+ </div>
+</section>
+<section class="split dark">
+ <div><span class="kicker">ROBOTTESTING AI</span><h2 data-es="IA como acelerador. QA como control de calidad." data-en="AI as an accelerator. QA as the quality control.">IA como acelerador. QA como control de calidad.</h2><p data-es="Aplicamos IA para acelerar análisis, diseño de pruebas, generación asistida y diagnóstico. La revisión técnica, arquitectura y aceptación permanecen bajo supervisión humana." data-en="We use AI to accelerate analysis, test design, assisted generation and diagnosis. Technical review, architecture and acceptance remain under human oversight.">Aplicamos IA para acelerar análisis, diseño de pruebas, generación asistida y diagnóstico. La revisión técnica, arquitectura y aceptación permanecen bajo supervisión humana.</p><a class="text-link" href="services.html#ai" data-es="Conoce el enfoque →" data-en="Explore the approach →">Conoce el enfoque →</a></div>
+ <div class="flow"><span>Requirement</span><b>→</b><span>AI + QA</span><b>→</b><span>Framework</span><b>→</b><span>CI/CD</span><b>→</b><span>Evidence</span></div>
+</section>
+<section class="section">
+ <div class="heading"><span>TECH STACK</span><h2 data-es="Tecnologías que utilizamos" data-en="Technologies we use">Tecnologías que utilizamos</h2></div>
+ <div class="tech"><span>Playwright</span><span>Selenium</span><span>Appium</span><span>TypeScript</span><span>Java</span><span>Postman</span><span>JMeter</span><span>LoadRunner</span><span>Azure DevOps</span><span>GitHub Actions</span></div>
+</section>
+<section class="banner"><div><span>ROBOTTESTING ACADEMY</span><h2 data-es="Capacitación práctica para equipos y profesionales QA." data-en="Practical training for QA teams and professionals.">Capacitación práctica para equipos y profesionales QA.</h2></div><a class="button" href="academy.html" data-es="Ver curso Playwright →" data-en="View Playwright course →">Ver curso Playwright →</a></section>
+</main>
+<footer>
+  <div class="brand"><span class="mark">R</span><span>ROBOT<b>TESTING</b></span></div>
+  <p data-es="Automation Engineering & Quality Solutions · México / Remoto"
+     data-en="Automation Engineering & Quality Solutions · Mexico / Remote">Automation Engineering & Quality Solutions · México / Remoto</p>
+  <p>© 2026 RobotTesting · PoC v0.2</p>
+</footer>
+<script src="script.js"></script>
+</body></html>
