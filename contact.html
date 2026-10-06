@@ -17,14 +17,15 @@
 <main>
 <section class="page-hero"><span class="kicker">LET'S TALK</span><h1 data-es="Hablemos de tu proyecto." data-en="Let's talk about your project.">Hablemos de tu proyecto.</h1><p data-es="Cuéntanos qué quieres automatizar. Para una PoC basta con identificar un flujo crítico, ambiente disponible y objetivo." data-en="Tell us what you want to automate. For a PoC, we only need a critical flow, an available environment and an objective.">Cuéntanos qué quieres automatizar.</p></section>
 <section class="section contact-grid">
- <form onsubmit="event.preventDefault(); alert(document.documentElement.lang==='es'?'PoC: conecta este formulario a tu correo o servicio de formularios antes de publicar.':'PoC: connect this form to your email or form service before publishing.');">
-  <label data-es="Nombre" data-en="Name">Nombre</label><input required placeholder="Nombre / Name">
-  <label data-es="Correo" data-en="Email">Correo</label><input required type="email" placeholder="tu@email.com">
-  <label data-es="Empresa" data-en="Company">Empresa</label><input placeholder="Empresa / Company">
-  <label data-es="¿Qué quieres automatizar?" data-en="What do you want to automate?">¿Qué quieres automatizar?</label><select><option>Web Automation</option><option>Mobile Automation</option><option>API Testing</option><option>Performance Testing</option><option>Automation Assessment / PoC</option><option>Training / Academy</option></select>
-  <label data-es="Mensaje" data-en="Message">Mensaje</label><textarea rows="6" placeholder="Cuéntanos sobre tu proyecto / Tell us about your project"></textarea>
-  <button class="button" data-es="Enviar solicitud →" data-en="Send request →">Enviar solicitud →</button>
- </form>
+ <form id="contactForm">
+   <label for="name" data-es="Nombre" data-en="Name">Nombre</label><input id="name" name="name" required placeholder="Nombre / Name">
+   <label for="email" data-es="Correo" data-en="Email">Correo</label><input id="email" name="email" required type="email" placeholder="tu@email.com">
+   <label for="company" data-es="Empresa" data-en="Company">Empresa</label><input id="company" name="company" placeholder="Empresa / Company">
+   <label for="service" data-es="¿Qué quieres automatizar?" data-en="What do you want to automate?">¿Qué quieres automatizar?</label><select id="service" name="service" required><option>Web Automation</option><option>Mobile Automation</option><option>API Testing</option><option>Performance Testing</option><option>Automation Assessment / PoC</option><option>Training / Academy</option></select>
+   <label for="message" data-es="Mensaje" data-en="Message">Mensaje</label><textarea id="message" name="message" rows="6" required placeholder="Cuéntanos sobre tu proyecto / Tell us about your project"></textarea>
+   <button id="submitButton" type="submit" class="button" data-es="Enviar solicitud →" data-en="Send request →">Enviar solicitud →</button>
+   <p id="formStatus" role="status" aria-live="polite"></p>
+  </form>
  <aside class="contact-card"><span class="kicker">CONTACT</span><h2 data-es="Información comercial" data-en="Business information">Información comercial</h2><p><b>Email</b><br>contacto@robottesting.com.mx</p><p><b>Location</b><br><span data-es="México · Servicio remoto" data-en="Mexico · Remote service">México · Servicio remoto</span></p><p><b>LinkedIn</b><br><a href="https://www.linkedin.com/company/robottesting"
    target="_blank"
    rel="noopener noreferrer"
@@ -40,4 +41,31 @@
   <p>© 2026 RobotTesting · PoC v0.2</p>
 </footer>
 <script src="script.js"></script>
+<script>
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const button = document.getElementById('submitButton');
+    const status = document.getElementById('formStatus');
+    const isSpanish = document.documentElement.lang !== 'en';
+    button.disabled = true;
+    status.textContent = isSpanish ? 'Enviando solicitud…' : 'Sending request…';
+    try {
+      const response = await fetch('https://formspree.io/f/xkjogwly', {
+        method: 'POST', body: new FormData(contactForm), headers: {'Accept':'application/json'}
+      });
+      if (response.ok) {
+        status.textContent = isSpanish ? '✓ Solicitud enviada correctamente. Nos pondremos en contacto contigo pronto.' : '✓ Request sent successfully. We will contact you shortly.';
+        contactForm.reset();
+      } else {
+        status.textContent = isSpanish ? 'No fue posible enviar la solicitud. Inténtalo nuevamente.' : 'We could not send your request. Please try again.';
+      }
+    } catch (error) {
+      console.error('Formspree submission error:', error);
+      status.textContent = isSpanish ? 'Ocurrió un error de conexión. Inténtalo nuevamente.' : 'A connection error occurred. Please try again.';
+    } finally { button.disabled = false; }
+  });
+}
+</script>
 </body></html>
